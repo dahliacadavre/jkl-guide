@@ -336,6 +336,12 @@ html{
                     }
                     #pageWrapper{
                         flex: 1 0 auto;
+                        #forumWrapper{
+                            h1{
+                                @include bigHFont();
+                                
+                            }
+                        }
                         #fbWrapper{
                             position: relative;
                             background-color: $SecondBgroundCol;

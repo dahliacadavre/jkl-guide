@@ -477,6 +477,13 @@ html > body > #app #componentWrapper #compContainer #pageWrapper {
           flex: 1 0 auto;
 }
 
+html > body > #app #componentWrapper #compContainer #pageWrapper #forumWrapper h1 {
+  font-family: "Righteous", cursive;
+  color: #FEFEFA;
+  font-size: 62px;
+  text-shadow: 2px 2px 4px #555555;
+}
+
 html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper {
   position: relative;
   background-color: #99EEE5;

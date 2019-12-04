@@ -2,7 +2,7 @@
   "name": "jkl-guide",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://m3311.pages.labranet.jamk.fi/jkl-guide",
+  "homepage": "https://punkkaridude.github.io/jkl-guide",
   "dependencies": {
     "@svgr/webpack": "^4.3.3",
     "bootstrap": "^4.3.1",

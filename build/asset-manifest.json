@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/jkl-guide/static/css/main.91b73cc8.chunk.css",
+    "main.js": "/jkl-guide/static/js/main.ded0ff97.chunk.js",
+    "main.js.map": "/jkl-guide/static/js/main.ded0ff97.chunk.js.map",
+    "runtime-main.js": "/jkl-guide/static/js/runtime-main.9a7ee4b3.js",
+    "runtime-main.js.map": "/jkl-guide/static/js/runtime-main.9a7ee4b3.js.map",
+    "static/css/2.63da5e23.chunk.css": "/jkl-guide/static/css/2.63da5e23.chunk.css",
+    "static/js/2.b87e13ab.chunk.js": "/jkl-guide/static/js/2.b87e13ab.chunk.js",
+    "static/js/2.b87e13ab.chunk.js.map": "/jkl-guide/static/js/2.b87e13ab.chunk.js.map",
+    "index.html": "/jkl-guide/index.html",
+    "precache-manifest.6bf4693fe5a9bb7698c11e8d34d25148.js": "/jkl-guide/precache-manifest.6bf4693fe5a9bb7698c11e8d34d25148.js",
+    "service-worker.js": "/jkl-guide/service-worker.js",
+    "static/css/2.63da5e23.chunk.css.map": "/jkl-guide/static/css/2.63da5e23.chunk.css.map",
+    "static/css/main.91b73cc8.chunk.css.map": "/jkl-guide/static/css/main.91b73cc8.chunk.css.map",
+    "static/media/site.scss": "/jkl-guide/static/media/placeholder.717f749f.svg",
+    "static/media/face.9a7b7194.svg": "/jkl-guide/static/media/face.9a7b7194.svg",
+    "static/media/insta.5c9fcbf6.svg": "/jkl-guide/static/media/insta.5c9fcbf6.svg",
+    "static/media/linkd.af0ac717.svg": "/jkl-guide/static/media/linkd.af0ac717.svg",
+    "static/media/twitter.10845a02.svg": "/jkl-guide/static/media/twitter.10845a02.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a7ee4b3.js",
+    "static/css/2.63da5e23.chunk.css",
+    "static/js/2.b87e13ab.chunk.js",
+    "static/css/main.91b73cc8.chunk.css",
+    "static/js/main.ded0ff97.chunk.js"
+  ]
+}

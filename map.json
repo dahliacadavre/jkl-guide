@@ -1,0 +1,220 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "feature",
+        "properties": {
+          "idService" : 1,
+          "name": "Jyväskylän Ammattikorkeakoulu Dynamo",
+          "address": "Piippukatu 2, 40100 Jyväskylä",
+          "email": "joku@gmail.com",
+          "mobile": 234234234234,
+          "category": "Ammattikorkeakoulu",
+          "website": "https://www.jamk.fi/fi/Etusivu/",
+          "details": "",
+          "imgurl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjY9-rR5fnlAhVnyaYKHRJ5DeAQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.jamk.fi%2Ffi%2FYhteystiedot%2FLutakon-kampus%2F&psig=AOvVaw2C0yj6uzJtgCwpEV1OqBME&ust=1574373812993672"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.759398937225342,
+            62.24169543587574
+          ]
+        }
+      },
+      {
+        "type": "feature",
+        "properties": {
+          "idService" : 2,
+          "name": "Kauppakeskus Forum",
+          "address": "",
+          "email": "",
+          "mobile": 0,
+          "category": "",
+          "website": "",
+          "details": "",
+          "coordinates": [],
+          "imgurl": ""
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.74795126914978,
+            62.24185033869621
+          ]
+        }
+      },
+      {
+        "type": "feature",
+        "properties": {
+          "idService" : 3,
+          "name": "Tanssisali Lutakko",
+          "address": "",
+          "email": "",
+          "mobile": 0,
+          "category": "",
+          "website": "",
+          "details": "",
+          "coordinates": [],
+          "imgurl": ""
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.7544207572937,
+            62.23926685537486
+          ]
+        }
+      },
+      {
+        "type": "feature",
+        "properties": {
+          "idService" : 4,
+          "name": "Jyväskylän ammattikorkeakoulu",
+          "address": "",
+          "email": "",
+          "mobile": 0,
+          "category": "",
+          "website": "",
+          "details": "",
+          "coordinates": [],
+          "imgurl": ""
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.74225425720215,
+            62.251183014355924
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "idService": 5,
+          "name": "Jyväskylän Lyseon Lukio",
+          "address": "Yliopistonkatu 13, 40100 Jyväskylä",
+          "email": "",
+          "mobile": 358403414602,
+          "category": "",
+          "website": "https://www.gradia.fi/oppimaan/lukio/jyvaskylan-lyseon-lukio",
+          "details": "",
+          "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Jyv%C3%A4skyl%C3%A4n_lyseo3.jpg/269px-Jyv%C3%A4skyl%C3%A4n_lyseo3.jpg"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.74415862560272,
+            62.24393645238758
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "idService": 6,
+          "name": "Bar Explosive",
+          "address": "Puistokatu, 40100 Jyväskylä",
+          "email": "",
+          "mobile": 358504646466,
+          "category": "",
+          "website": "https://explosivebar.com/",
+          "details": "",
+          "imgurl": "https://explosivebar.com/media/aw0b1349-e1495107518412.jpg"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.750169456005096,
+            62.244769608362404
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "idService": 7,
+          "name": "Kirkkopuisto",
+          "address": "Kirkkopuisto, 40100 Jyväskylä",
+          "email": "",
+          "mobile": 0,
+          "category": "",
+          "website": "",
+          "details": "",
+          "imgurl": ""
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.745086669921875,
+            62.24040121669893
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "idService": 8,
+          "name": "Jyväskylän yliopiston Mattilanniemen kampus",
+          "address": "Mattilanniemi 2, 40100 Jyväskylä",
+          "email": "",
+          "mobile": 358504285234,
+          "category": "",
+          "website": "",
+          "details": "",
+          "coordinates": [],
+          "imgurl": ""
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.735613107681274,
+            62.231819988295044
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "idService": 9,
+          "name": "Jyväskylän kaupungin pääkirjasto",
+          "address": "Vapaudenkatu 39-41, 40100 Jyväskylä",
+          "email": "",
+          "mobile": 358142664123,
+          "category": "",
+          "website": "",
+          "details": "",
+          "coordinates": [],
+          "imgurl": ""
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.742651224136353,
+            62.23874713373169
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+        "idService" : 10,
+          "name": "Jyväskylän matkakeskus",
+          "address": "Hannikaisenkatu 20-22, 40100 Jyväskylä",
+          "email": "",
+          "mobile": 0,
+          "category": "",
+          "website": "",
+          "details": "",
+          "coordinates": [],
+          "imgurl": ""},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.754903554916382,
+            62.24189031348846
+          ]
+        }
+      }
+    ]
+  }

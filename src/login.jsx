@@ -117,10 +117,10 @@ export default class LoginApp extends React.Component {
         this.componentDidMount = this.componentDidMount.bind(this);
     }
     componentDidMount(){
-        let logo = document.querySelectorAll("#jklGuideLogo path");
-        for(let i = 0; i< logo.length; i++){
-            console.log(`Letter ${i}: length: ${logo[i].getTotalLength()}`);
-        }
+        ///let logo = document.querySelectorAll("#jklGuideLogo path");
+        ///for(let i = 0; i< logo.length; i++){
+            ///console.log(`Letter ${i}: length: ${logo[i].getTotalLength()}`);
+        ///}
     }
     render(){
         return(

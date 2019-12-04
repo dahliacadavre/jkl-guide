@@ -66,7 +66,7 @@ class mapApp extends React.Component {
     handleonChange = (e) => {
         const value = e.target.value;
         const expression = new RegExp(`${value}`,'i');
-        const url = "http://m3311.pages.labranet.jamk.fi/web-visualisointi/map.json";
+        const url = "https://jkl-guide.firebaseio.com/.json";
 
         if( this.state.tag === true) this.setState({tag: false});
         if(value.length > 0 && e.keyCode !== 40 && e.keyCode !== 38){
@@ -79,6 +79,7 @@ class mapApp extends React.Component {
                 url: url,
                 success: (searchResults) => {
                     console.log("AJAX success")
+                    ///console.log(searchResults)
                     const services = searchResults.features;
                     services.forEach((element) => {
                         let name = element.properties.name;

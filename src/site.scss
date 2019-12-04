@@ -108,7 +108,7 @@ $FontFamHeading: 'Righteous', cursive;
 .fade-appear,
 .fade-enter {
     opacity: 0;
-    z-index: 1;
+    z-index: 20s;
 }
 .fade-appear-active,
 .fade-enter.fade-enter-active {
@@ -159,26 +159,37 @@ html{
                         @include smallHFont();
                     }
                     input{
+                        transition: all .2s; 
                         background-color: $inputbackColor;
                         border: $border;
                         &::placeholder{
                             color: #929292;
                             font-style: italic; 
-                        } 
+                        }
+                        &:hover{
+                            background-color: #e2dfdf;
+                        }
                     }
                     label{
                         color: $blackColor;
                     }
                     button{
                         color: $blackColor;
-                        &.login{
+                        &#login{
+                            transition: all .2s;
                             background-color: rgb(28, 126, 88);
                             border: 2px rgb(25, 107, 76) solid;
+                            &:hover{
+                                transform: scale(1.02);
+                            }
                         }
-                        &.register{
+                        &#reg{
+                            transition: all .2s;
                             background-color: rgb(53, 184, 112);
                             border: 2px rgb(43, 151, 92) solid;
-
+                            &:hover{
+                                transform: scale(1.02);
+                            }
                         }
                     }
                     #loginContainer,  #regContainer{
@@ -326,7 +337,7 @@ html{
                     #pageWrapper{
                         flex: 1 0 auto;
                         #fbWrapper{
-                           position: relative;
+                            position: relative;
                             background-color: $SecondBgroundCol;
                             padding: 5vh 0;
                             @include media-breakpoint-between(xs,sm) {padding: 0 0 3vh 0;}

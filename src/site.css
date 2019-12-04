@@ -91,7 +91,7 @@
 .fade-appear,
 .fade-enter {
   opacity: 0;
-  z-index: 1;
+  z-index: 20s;
 }
 
 .fade-appear-active,
@@ -182,6 +182,8 @@ html > body > #app #componentWrapper #loginApp h2 {
 }
 
 html > body > #app #componentWrapper #loginApp input {
+  -webkit-transition: all .2s;
+  transition: all .2s;
   background-color: #F2F2F2;
   border: 1px #b1b1b1 solid;
 }
@@ -206,6 +208,10 @@ html > body > #app #componentWrapper #loginApp input::placeholder {
   font-style: italic;
 }
 
+html > body > #app #componentWrapper #loginApp input:hover {
+  background-color: #e2dfdf;
+}
+
 html > body > #app #componentWrapper #loginApp label {
   color: #242424;
 }
@@ -214,14 +220,28 @@ html > body > #app #componentWrapper #loginApp button {
   color: #242424;
 }
 
-html > body > #app #componentWrapper #loginApp button.login {
+html > body > #app #componentWrapper #loginApp button#login {
+  -webkit-transition: all .2s;
+  transition: all .2s;
   background-color: #1c7e58;
   border: 2px #196b4c solid;
 }
 
-html > body > #app #componentWrapper #loginApp button.register {
+html > body > #app #componentWrapper #loginApp button#login:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+html > body > #app #componentWrapper #loginApp button#reg {
+  -webkit-transition: all .2s;
+  transition: all .2s;
   background-color: #35b870;
   border: 2px #2b975c solid;
+}
+
+html > body > #app #componentWrapper #loginApp button#reg:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 html > body > #app #componentWrapper #loginApp #loginContainer, html > body > #app #componentWrapper #loginApp #regContainer {

@@ -4,8 +4,9 @@ import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-    HashRouter as Router,
+    BrowserRouter as Router,
     Route,
+    Switch
 } from "react-router-dom";
 import {
     CSSTransition,
@@ -30,20 +31,32 @@ class App extends React.Component {
     render() {
         return (
             <div id="componentWrapper">
-                <Route  
-                    path="/"
-                    render={props => (
-                        <LoginApp {...props} loggedInStatus={this.state.loggedInStatus} />
-                    )}
-                >   
-                </Route>
-                <Route 
-                    path="/JKL-Guide"
-                    render={props => (
-                        <Frontpage {...props} loggedInStatus={this.state.loggedInStatus} />
-                    )}
-                >
-                </Route>
+                        <Route  
+                            path="/"
+                            render={props => (
+                                <CSSTransition
+                                timeout={600}
+                                classNames="fade"
+                                >
+                                <LoginApp {...props} loggedInStatus={this.state.loggedInStatus} />
+                                </CSSTransition>
+
+                            )}
+                        >   
+                        </Route>
+                        <Route 
+                            path="/JKL-Guide"
+                            render={props => (
+                                <CSSTransition
+                                timeout={600}
+                                classNames="fade"
+                                >
+                                <Frontpage {...props} loggedInStatus={this.state.loggedInStatus} />
+                                </CSSTransition>
+                            )}
+                        >
+                        </Route>
+                )} /> 
             </div>    
         );
     }

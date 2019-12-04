@@ -55,8 +55,7 @@ class App extends React.Component {
                                 </CSSTransition>
                             )}
                         >
-                        </Route>
-                )} /> 
+                        </Route> 
             </div>    
         );
     }

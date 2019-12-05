@@ -55,6 +55,7 @@ export default class Nav extends React.Component {
             <div id="navbarWrapper" className="container-fluid p-0">
                 <nav className="navbar navbar-expand-lg navbar-light shadow py-2">
                     <Link to="/JKL-Guide/" className="navbar-brand py-0 pl-md-4 mr-0">JKL-Guide</Link>
+                    <h1 className="navheader py-0 pl-md-4 mr-0 mb-0">{this.props.siteName}</h1>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

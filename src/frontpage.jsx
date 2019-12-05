@@ -20,11 +20,17 @@ import Forum from './forum';
 import Favorites from './favorites';
 
 export default class Frontpage extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+
+        }
+    }
     render() {
         return ( 
             <Route render={({location}) => (     
                 <div id="compContainer" className="p-0 col-lg-11 d-flex flex-column m-auto shadow shadow-lg" >
-                    <Nav />
+                    <Nav siteName={ location.pathname==='/JKL-Guide/' ? '' : location.pathname.replace('/JKL-Guide', '')}/>
                     <div id="pageWrapper" className="container-fluid p-0">
                         <TransitionGroup>
                             <CSSTransition

@@ -14,7 +14,7 @@ const searchIcon =
 </g>
 </svg>;
 
-class mapApp extends React.Component {
+export default class mapApp extends React.Component {
     
     constructor(props) {
         super(props);
@@ -227,8 +227,7 @@ class mapApp extends React.Component {
                                     let nextFocus = $("#asyncresult ul li");
                                     if(e.keyCode === 40 && $("#asyncresult").children().length > 0){
                                         this.refs.searchInput.blur();
-                                        nextFocus.first().focus();
-                                        
+                                        nextFocus.first().focus(); 
                                     }
                                 }}
                                 value={searchvalue}
@@ -250,7 +249,6 @@ class mapApp extends React.Component {
                         </div>
                     </div>  
                 </form>
-                
                 <div id="mapParent" className="container-fluid px-0 rounded shadow mt-md-2 mt-0">
                     <div className='sidebarStyle'>
                         <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
@@ -261,6 +259,4 @@ class mapApp extends React.Component {
         )
     }
 };
-
-export default mapApp;
 

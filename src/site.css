@@ -12,6 +12,21 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
+html > body {
+  height: 100%;
+  width: 100%;
+  background-color: #4B3F3F;
+}
+
+html > body > #app {
+  height: 100vh;
+}
+
 #jklGuideLogo {
   -webkit-filter: drop-shadow(2px 2px 4px #555555);
           filter: drop-shadow(2px 2px 4px #555555);
@@ -141,32 +156,12 @@
   }
 }
 
-h1, h2 {
-  font-family: "Roboto", sans-serif;
-  color: #FEFEFA;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
-html > body {
-  height: 100%;
-  width: 100%;
-  background-color: #4B3F3F;
-}
-
-html > body > #app {
-  height: 100vh;
-}
-
-html > body > #app #componentWrapper #loginApp {
+#componentWrapper #loginApp {
   background: #99EEE5;
   font-family: "Roboto", sans-serif;
 }
 
-html > body > #app #componentWrapper #loginApp h1 {
+#componentWrapper #loginApp h1 {
   font-family: "Righteous", cursive;
   color: #FEFEFA;
   font-size: 62px;
@@ -174,77 +169,77 @@ html > body > #app #componentWrapper #loginApp h1 {
   font-size: 100px;
 }
 
-html > body > #app #componentWrapper #loginApp h2 {
+#componentWrapper #loginApp h2 {
   font-family: "Righteous", cursive;
   color: #FEFEFA;
   font-size: 40px;
   text-shadow: 2px 2px 4px #555555;
 }
 
-html > body > #app #componentWrapper #loginApp input {
+#componentWrapper #loginApp input {
   -webkit-transition: all .2s;
   transition: all .2s;
   background-color: #F2F2F2;
   border: 1px #b1b1b1 solid;
 }
 
-html > body > #app #componentWrapper #loginApp input::-webkit-input-placeholder {
+#componentWrapper #loginApp input::-webkit-input-placeholder {
   color: #929292;
   font-style: italic;
 }
 
-html > body > #app #componentWrapper #loginApp input:-ms-input-placeholder {
+#componentWrapper #loginApp input:-ms-input-placeholder {
   color: #929292;
   font-style: italic;
 }
 
-html > body > #app #componentWrapper #loginApp input::-ms-input-placeholder {
+#componentWrapper #loginApp input::-ms-input-placeholder {
   color: #929292;
   font-style: italic;
 }
 
-html > body > #app #componentWrapper #loginApp input::placeholder {
+#componentWrapper #loginApp input::placeholder {
   color: #929292;
   font-style: italic;
 }
 
-html > body > #app #componentWrapper #loginApp input:hover {
+#componentWrapper #loginApp input:hover {
   background-color: #e2dfdf;
 }
 
-html > body > #app #componentWrapper #loginApp label {
+#componentWrapper #loginApp label {
   color: #242424;
 }
 
-html > body > #app #componentWrapper #loginApp button {
+#componentWrapper #loginApp button {
   color: #242424;
 }
 
-html > body > #app #componentWrapper #loginApp button#login {
+#componentWrapper #loginApp button#login {
   -webkit-transition: all .2s;
   transition: all .2s;
   background-color: #1c7e58;
   border: 2px #196b4c solid;
 }
 
-html > body > #app #componentWrapper #loginApp button#login:hover {
+#componentWrapper #loginApp button#login:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
-html > body > #app #componentWrapper #loginApp button#reg {
+#componentWrapper #loginApp button#reg {
   -webkit-transition: all .2s;
   transition: all .2s;
   background-color: #35b870;
   border: 2px #2b975c solid;
 }
 
-html > body > #app #componentWrapper #loginApp button#reg:hover {
+#componentWrapper #loginApp button#reg:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
-html > body > #app #componentWrapper #loginApp #loginContainer, html > body > #app #componentWrapper #loginApp #regContainer {
+#loginContainer, #regContainer {
   height: 100vh;
   background-image: url("img/bg.png");
   background-color: #99EEE5;
@@ -257,7 +252,7 @@ html > body > #app #componentWrapper #loginApp #loginContainer, html > body > #a
 }
 
 @media (max-width: 575.98px) {
-  html > body > #app #componentWrapper #loginApp #loginContainer, html > body > #app #componentWrapper #loginApp #regContainer {
+  #loginContainer, #regContainer {
     background-size: 300%;
     -webkit-animation: bgMove 50s linear infinite;
             animation: bgMove 50s linear infinite;
@@ -265,27 +260,27 @@ html > body > #app #componentWrapper #loginApp #loginContainer, html > body > #a
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  html > body > #app #componentWrapper #loginApp #loginContainer, html > body > #app #componentWrapper #loginApp #regContainer {
+  #loginContainer, #regContainer {
     -webkit-animation: bgMove 50s linear infinite;
             animation: bgMove 50s linear infinite;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  html > body > #app #componentWrapper #loginApp #loginContainer, html > body > #app #componentWrapper #loginApp #regContainer {
+  #loginContainer, #regContainer {
     -webkit-animation: bgMove 50s linear infinite;
             animation: bgMove 50s linear infinite;
   }
 }
 
 @media (min-width: 992px) {
-  html > body > #app #componentWrapper #loginApp #loginContainer, html > body > #app #componentWrapper #loginApp #regContainer {
+  #loginContainer, #regContainer {
     -webkit-animation: bgMove 50s linear infinite;
             animation: bgMove 50s linear infinite;
   }
 }
 
-html > body > #app #componentWrapper #loginApp #loginContainer > .colorLayer, html > body > #app #componentWrapper #loginApp #regContainer > .colorLayer {
+#loginContainer > .colorLayer, #regContainer > .colorLayer {
   position: absolute;
   height: 100%;
   background-color: rgba(144, 238, 218, 0.842);
@@ -309,32 +304,38 @@ html > body > #app #componentWrapper #loginApp #loginContainer > .colorLayer, ht
   }
 }
 
-html > body > #app #componentWrapper #compContainer {
+#compContainer {
   height: 100vh;
   background-color: #99EEE5;
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper {
+#navbarWrapper {
   background-color: #99EEE5;
   z-index: 999;
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper .navbar-toggler:focus {
+#navbarWrapper .navbar-toggler:focus {
   outline: none;
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper .navbar-brand {
+#navbarWrapper .navheader {
+  font-family: "Righteous", cursive;
+  color: #4B3F3F;
+  text-shadow: 2px 2px 4px #8b8b8b;
+}
+
+#navbarWrapper .navbar-brand {
   -webkit-transition: all .2s;
   transition: all .2s;
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper .navbar-brand:hover {
+#navbarWrapper .navbar-brand:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
 @media (max-width: 767.98px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper .navbar-brand {
+  #navbarWrapper .navbar-brand {
     font-family: "Righteous", cursive;
     color: #FEFEFA;
     font-size: 40px;
@@ -343,7 +344,7 @@ html > body > #app #componentWrapper #compContainer #navbarWrapper .navbar-brand
 }
 
 @media (min-width: 768px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper .navbar-brand {
+  #navbarWrapper .navbar-brand {
     font-family: "Righteous", cursive;
     color: #FEFEFA;
     font-size: 62px;
@@ -351,7 +352,7 @@ html > body > #app #componentWrapper #compContainer #navbarWrapper .navbar-brand
   }
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarDropdownMenuLink {
+#navbarWrapper #navbarDropdownMenuLink {
   -webkit-transition: all .2s;
   transition: all .2s;
   height: 74px;
@@ -363,7 +364,7 @@ html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarDropdo
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarDropdownMenuLink {
+  #navbarWrapper #navbarDropdownMenuLink {
     height: auto;
     width: auto;
     margin-bottom: 8px;
@@ -371,22 +372,22 @@ html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarDropdo
   }
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarDropdownMenuLink:focus {
+#navbarWrapper #navbarDropdownMenuLink:focus {
   outline: none !important;
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarDropdownMenuLink:hover {
+#navbarWrapper #navbarDropdownMenuLink:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li.nav-item.dropdown.pl-1.show > div {
+  #navbarWrapper #navbarNavDropdown > ul > li.nav-item.dropdown.pl-1.show > div {
     margin-bottom: 8px;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li > a {
+#navbarWrapper #navbarNavDropdown > ul > li > a {
   -webkit-transition: all .2s;
   transition: all .2s;
   display: -webkit-box;
@@ -407,7 +408,7 @@ html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDro
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li > a {
+  #navbarWrapper #navbarNavDropdown > ul > li > a {
     height: auto;
     width: auto;
     border: none;
@@ -418,7 +419,7 @@ html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDro
 }
 
 @media (min-width: 576px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li > a .icon {
+  #navbarWrapper #navbarNavDropdown > ul > li > a .icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -429,87 +430,89 @@ html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDro
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li > a .icon {
+  #navbarWrapper #navbarNavDropdown > ul > li > a .icon {
     display: none;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li > a .text {
+#navbarWrapper #navbarNavDropdown > ul > li > a .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media (min-width: 992px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li > a .text {
+  #navbarWrapper #navbarNavDropdown > ul > li > a .text {
     display: none;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li > a svg {
+#navbarWrapper #navbarNavDropdown > ul > li > a svg {
   fill: #555555;
   height: 35px;
   width: 35px;
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown > ul > li > a:hover {
+#navbarWrapper #navbarNavDropdown > ul > li > a:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #navbarWrapper #navbarNavDropdown .nav-item.dropdown {
+  #navbarWrapper #navbarNavDropdown .nav-item.dropdown {
     padding: 8px 0 8px 0;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper .dropdown-toggle::after {
+#navbarWrapper .dropdown-toggle::after {
   display: none;
 }
 
-html > body > #app #componentWrapper #compContainer #navbarWrapper .dropdown-menu {
+#navbarWrapper .dropdown-menu {
   border-radius: 10px;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper {
+#pageWrapper {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #forumWrapper h1 {
+#pageWrapper #forumWrapper h1 {
   font-family: "Righteous", cursive;
   color: #FEFEFA;
   font-size: 62px;
   text-shadow: 2px 2px 4px #555555;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper {
+#pageWrapper #fbWrapper, #pageWrapper #forumWrapper {
+  height: 100%;
+  padding: 0;
   position: relative;
   background-color: #99EEE5;
   padding: 5vh 0;
 }
 
 @media (max-width: 767.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper {
+  #pageWrapper #fbWrapper, #pageWrapper #forumWrapper {
     padding: 0 0 3vh 0;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper {
+  #pageWrapper #fbWrapper, #pageWrapper #forumWrapper {
     padding: 3vh 2vh 3vh 2vh;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper > div:first-child > div {
+#pageWrapper #fbWrapper > div:first-child > div, #pageWrapper #forumWrapper > div:first-child > div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper > div:first-child > div {
+  #pageWrapper #fbWrapper > div:first-child > div, #pageWrapper #forumWrapper > div:first-child > div {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -518,7 +521,7 @@ html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper > di
 }
 
 @media (max-width: 575.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper > div:first-child > div {
+  #pageWrapper #fbWrapper > div:first-child > div, #pageWrapper #forumWrapper > div:first-child > div {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
@@ -526,154 +529,46 @@ html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper > di
   }
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper {
-  height: 100%;
+#addserviceWrapper {
   position: relative;
 }
 
-@media (max-width: 767.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper {
-    margin-top: 8px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm {
-    padding: 10px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 1199.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm {
-    padding-bottom: 0;
-  }
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchInput > input {
-  background-color: #F2F2F2;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchInput > input::-webkit-input-placeholder {
-  color: #7c7b76;
-  font-style: italic;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchInput > input:-ms-input-placeholder {
-  color: #7c7b76;
-  font-style: italic;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchInput > input::-ms-input-placeholder {
-  color: #7c7b76;
-  font-style: italic;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchInput > input::placeholder {
-  color: #7c7b76;
-  font-style: italic;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchBtn > button {
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchBtn > button:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  background-color: #8d8a85;
-  border: 1px #524f4f solid;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchBtn > button:hover svg {
-  fill: #00ffaa;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #searchBtn > button > svg {
-  height: 100%;
-  fill: #555555;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm input, html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm button {
-  border: 1px #b1b1b1 solid;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult {
-  z-index: 50;
-}
-
-@media (min-width: 576px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult {
-    -webkit-transform: translateY(calc(1.5em + 1rem + 0.5rem));
-            transform: translateY(calc(1.5em + 1rem + 0.5rem));
-    position: absolute;
-  }
-}
-
-@media (max-width: 575.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult {
-    position: inherit;
-  }
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult ul {
-  padding-left: 0;
-  border: 1px #b1b1b1 solid;
-  border-radius: 10px;
-  background-color: #FEFEFA;
-  list-style-type: none;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult ul > li {
-  cursor: pointer;
-  padding: 8px 16px;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult ul > li:first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult ul > li:last-child {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult ul > li:focus, html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper form > div#searchForm #asyncresult ul > li:hover {
-  background-color: #929292;
-  outline: #b1b1b1;
-  font-size: 1.1rem;
-}
-
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent {
-  background-color: #FEFEFA;
+#map {
   position: relative;
-  border: 1px #b1b1b1 solid;
 }
 
 @media (min-width: 768px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent {
-    height: 65vh;
+  #map {
+    height: 50vh;
   }
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent {
-    height: 50vh;
+  #map {
+    height: 40vh;
     margin: 8px 0 8px 0;
   }
 }
 
 @media (max-width: 767.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent {
-    height: 45vh;
+  #map {
+    height: 30vh;
     margin: 8px 0 8px 0;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent .sidebarStyle {
+#map .mapContainer {
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: greenyellow;
+  border: 1px #b1b1b1 solid;
+}
+
+#map .sidebarStyle {
   display: inline-block;
   position: absolute;
   top: 0;
@@ -688,7 +583,33 @@ html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #map
   font-size: 0.8em;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent .mapContainer {
+#mapParent {
+  background-color: #FEFEFA;
+  position: relative;
+  border: 1px #b1b1b1 solid;
+}
+
+@media (min-width: 768px) {
+  #mapParent {
+    height: 65vh;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #mapParent {
+    height: 50vh;
+    margin: 8px 0 8px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #mapParent {
+    height: 45vh;
+    margin: 8px 0 8px 0;
+  }
+}
+
+#mapParent .mapContainer {
   margin: 10px;
   position: absolute;
   top: 0;
@@ -699,7 +620,22 @@ html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #map
   border: 1px #b1b1b1 solid;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent .mapContainer .mapboxgl-marker {
+#mapParent .sidebarStyle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040a8;
+  border-radius: 10px;
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+
+.mapboxgl-marker {
   background-image: url("img/placeholder.svg");
   background-size: cover;
   width: 40px;
@@ -708,43 +644,164 @@ html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #map
   z-index: 10;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent .mapContainer .mapboxgl-popup {
+.mapboxgl-popup {
   max-width: 200px;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent .mapContainer .mapboxgl-popup-content {
+.mapboxgl-popup-content {
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #mapappWrapper #mapParent .mapContainer .mapboxgl-popup-content > h1 {
+.mapboxgl-popup-content > h1 {
   font-size: 1rem;
   color: #242424;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer {
+#mapappWrapper {
+  height: 100%;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  #mapappWrapper {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #mapappWrapper form > div#searchForm {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  #mapappWrapper form > div#searchForm {
+    padding-bottom: 0;
+  }
+}
+
+#mapappWrapper form > div#searchForm #searchInput > input {
+  background-color: #F2F2F2;
+}
+
+#mapappWrapper form > div#searchForm #searchInput > input::-webkit-input-placeholder {
+  color: #7c7b76;
+  font-style: italic;
+}
+
+#mapappWrapper form > div#searchForm #searchInput > input:-ms-input-placeholder {
+  color: #7c7b76;
+  font-style: italic;
+}
+
+#mapappWrapper form > div#searchForm #searchInput > input::-ms-input-placeholder {
+  color: #7c7b76;
+  font-style: italic;
+}
+
+#mapappWrapper form > div#searchForm #searchInput > input::placeholder {
+  color: #7c7b76;
+  font-style: italic;
+}
+
+#mapappWrapper form > div#searchForm #searchBtn > button {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+#mapappWrapper form > div#searchForm #searchBtn > button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  background-color: #8d8a85;
+  border: 1px #524f4f solid;
+}
+
+#mapappWrapper form > div#searchForm #searchBtn > button:hover svg {
+  fill: #00ffaa;
+}
+
+#mapappWrapper form > div#searchForm #searchBtn > button > svg {
+  height: 100%;
+  fill: #555555;
+}
+
+#mapappWrapper form > div#searchForm input, #mapappWrapper form > div#searchForm button {
+  border: 1px #b1b1b1 solid;
+}
+
+#mapappWrapper form > div#searchForm #asyncresult {
+  z-index: 50;
+}
+
+@media (min-width: 576px) {
+  #mapappWrapper form > div#searchForm #asyncresult {
+    -webkit-transform: translateY(calc(1.5em + 1rem + 0.5rem));
+            transform: translateY(calc(1.5em + 1rem + 0.5rem));
+    position: absolute;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #mapappWrapper form > div#searchForm #asyncresult {
+    position: inherit;
+  }
+}
+
+#mapappWrapper form > div#searchForm #asyncresult ul {
+  padding-left: 0;
+  border: 1px #b1b1b1 solid;
+  border-radius: 10px;
+  background-color: #FEFEFA;
+  list-style-type: none;
+}
+
+#mapappWrapper form > div#searchForm #asyncresult ul > li {
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+#mapappWrapper form > div#searchForm #asyncresult ul > li:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#mapappWrapper form > div#searchForm #asyncresult ul > li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#mapappWrapper form > div#searchForm #asyncresult ul > li:focus, #mapappWrapper form > div#searchForm #asyncresult ul > li:hover {
+  background-color: #929292;
+  outline: #b1b1b1;
+  font-size: 1.1rem;
+}
+
+#forumContainer {
   height: 100%;
   padding: 0;
 }
 
 @media (max-width: 767.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer {
+  #forumContainer {
     margin: 8px 0 8px 0;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card {
+#forumContainer > .card {
   background-color: #FEFEFA;
   border: 1px #b1b1b1 solid;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-header {
+#forumContainer > .card .card-header {
   font-family: "Righteous", cursive;
   color: #242424;
   font-size: 18.5px;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-header.title {
+#forumContainer > .card .card-header.title {
   -webkit-transition: -webkit-transform .2;
   transition: -webkit-transform .2;
   transition: transform .2;
@@ -753,7 +810,7 @@ html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #for
   padding: 8px 16px;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-header.title > h2 {
+#forumContainer > .card .card-header.title > h2 {
   color: #242424;
   font-size: 1.2rem;
   font-weight: bold;
@@ -762,12 +819,12 @@ html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #for
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-header.title > h2 {
+  #forumContainer > .card .card-header.title > h2 {
     font-size: 1rem;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-header.title > p.date {
+#forumContainer > .card .card-header.title > p.date {
   padding: 0;
   margin: 0;
   font-size: 0.8rem;
@@ -776,34 +833,34 @@ html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #for
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-header.title > p.date {
+  #forumContainer > .card .card-header.title > p.date {
     font-size: 0.7rem;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-body {
+#forumContainer > .card .card-body {
   overflow: auto;
   max-height: 15vh;
   padding-top: 8px;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-body::-webkit-scrollbar {
+#forumContainer > .card .card-body::-webkit-scrollbar {
   width: 0;
 }
 
-html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-body > p {
+#forumContainer > .card .card-body > p {
   font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
 @media (max-width: 991.98px) {
-  html > body > #app #componentWrapper #compContainer #pageWrapper #fbWrapper #forumContainer > .card .card-body > p {
+  #forumContainer > .card .card-body > p {
     font-size: 0.8rem;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #sticky-footer {
+#sticky-footer {
   z-index: 999;
   background-color: #99EEE5;
   -webkit-box-shadow: 0 -6px 18px -5px rgba(0, 0, 0, 0.473);
@@ -811,18 +868,18 @@ html > body > #app #componentWrapper #compContainer #sticky-footer {
 }
 
 @media (max-width: 767.98px) {
-  html > body > #app #componentWrapper #compContainer #sticky-footer footer #centerCR {
+  #sticky-footer footer #centerCR {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
-  html > body > #app #componentWrapper #compContainer #sticky-footer footer #rightCR {
+  #sticky-footer footer #rightCR {
     display: none;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #sticky-footer footer > #someIcons > div {
+#sticky-footer footer > #someIcons > div {
   -webkit-transition: all .2s;
   transition: all .2s;
   width: 35px;
@@ -830,19 +887,19 @@ html > body > #app #componentWrapper #compContainer #sticky-footer footer > #som
   margin-right: 8px;
 }
 
-html > body > #app #componentWrapper #compContainer #sticky-footer footer > #someIcons > div:hover {
+#sticky-footer footer > #someIcons > div:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
 @media (max-width: 767.98px) {
-  html > body > #app #componentWrapper #compContainer #sticky-footer footer > #someIcons > div {
+  #sticky-footer footer > #someIcons > div {
     width: 24px;
     height: 24px;
   }
 }
 
-html > body > #app #componentWrapper #compContainer #sticky-footer footer > #someIcons > div > svg {
+#sticky-footer footer > #someIcons > div > svg {
   height: 100%;
   width: 100%;
 }

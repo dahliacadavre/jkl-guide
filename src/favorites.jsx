@@ -7,8 +7,8 @@ import './site.scss';
 class Favorites extends React.Component {
     render() {
         return (
-            <div className="page">
-                  <h1>Favorites</h1>
+            <div id="favoritesWrapper" className="page d-flex justify-content-around flex-wrap">
+
             </div>
         );
     }

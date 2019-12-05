@@ -21,13 +21,6 @@ $FontFamHeading: 'Righteous', cursive;
     blackColor: $blackColor;
 }
 
-* {
-    box-sizing: border-box;
-    font-family: $FontFam;;
-}
-
-
-
 @mixin bigHFont {
     font-family: $FontFamHeading;
     color: $PrimaryFontCol;
@@ -47,6 +40,26 @@ $FontFamHeading: 'Righteous', cursive;
     color: $blackColor;
     font-size: 18.5px;
 }
+
+* {
+    box-sizing: border-box;
+    font-family: $FontFam;;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    > body{
+        height: 100%;
+        width: 100%;
+        background-color: $BackGroundCol;
+        > #app{
+            height: 100vh;
+        }   
+    }  
+}
+
+// LOGIN SVG TEXT ANIMATION //
 
 #jklGuideLogo{
     filter: drop-shadow( 2px 2px 4px #555555);
@@ -99,6 +112,9 @@ $FontFamHeading: 'Righteous', cursive;
         }
     }
 }
+
+// TRANSITION ANIMATION //
+
 .page{
     position: absolute;
     left: 0;
@@ -123,8 +139,6 @@ $FontFamHeading: 'Righteous', cursive;
     transition: opacity 150ms linear;
 }
 
-
-
 @keyframes lineAnim{
     to{ stroke-dashoffset: 0;}
 }
@@ -133,492 +147,534 @@ $FontFamHeading: 'Righteous', cursive;
     to{ fill: #FEFEFA;}
 }
 
-h1, h2 {
-    font-family: $FontFam;
-    color: $PrimaryFontCol;
+
+#componentWrapper{
+    #loginApp{
+        background: $SecondBgroundCol;
+        font-family: $FontFam;
+        h1{
+            @include bigHFont();
+            font-size: 100px;
+        }
+        h2{
+            @include smallHFont();
+        }
+        input{
+            transition: all .2s; 
+            background-color: $inputbackColor;
+            border: $border;
+            &::placeholder{
+                color: #929292;
+                font-style: italic; 
+            }
+            &:hover{
+                background-color: #e2dfdf;
+            }
+        }
+        label{
+            color: $blackColor;
+        }
+        button{
+            color: $blackColor;
+            &#login{
+                transition: all .2s;
+                background-color: rgb(28, 126, 88);
+                border: 2px rgb(25, 107, 76) solid;
+                &:hover{
+                    transform: scale(1.02);
+                }
+            }
+            &#reg{
+                transition: all .2s;
+                background-color: rgb(53, 184, 112);
+                border: 2px rgb(43, 151, 92) solid;
+                &:hover{
+                    transform: scale(1.02);
+                }
+            }
+        }  
+    }    
 }
 
-html{
-    height: 100%;
-    width: 100%;
-    > body{
-        height: 100%;
-        width: 100%;
-        background-color: $BackGroundCol;
-        > #app{
-            height: 100vh;
-            #componentWrapper{
-                #loginApp{
-                    background: $SecondBgroundCol;
-                    font-family: $FontFam;
-                    h1{
-                        @include bigHFont();
-                        font-size: 100px;
-                    }
-                    h2{
-                        @include smallHFont();
-                    }
-                    input{
-                        transition: all .2s; 
-                        background-color: $inputbackColor;
-                        border: $border;
-                        &::placeholder{
-                            color: #929292;
-                            font-style: italic; 
-                        }
-                        &:hover{
-                            background-color: #e2dfdf;
-                        }
-                    }
-                    label{
-                        color: $blackColor;
-                    }
-                    button{
-                        color: $blackColor;
-                        &#login{
-                            transition: all .2s;
-                            background-color: rgb(28, 126, 88);
-                            border: 2px rgb(25, 107, 76) solid;
-                            &:hover{
-                                transform: scale(1.02);
-                            }
-                        }
-                        &#reg{
-                            transition: all .2s;
-                            background-color: rgb(53, 184, 112);
-                            border: 2px rgb(43, 151, 92) solid;
-                            &:hover{
-                                transform: scale(1.02);
-                            }
-                        }
-                    }
-                    #loginContainer,  #regContainer{
-                        height: 100vh;
-                        background-image: url("img/bg.png");
-                        background-color: $SecondBgroundCol;
-                        background-position: 0 0;
-                        background-repeat: repeat;
-                        background-size: 200%;
-                        position: relative;
-                        animation: bgMove 5s linear infinite;
-                        @include media-breakpoint-only(xs){
-                            background-size: 300%;
-                            animation: bgMove 50s linear infinite;
-                        }
-                        @include media-breakpoint-only(sm){
-                            animation: bgMove 50s linear infinite;
-                        }
-                        @include media-breakpoint-only(md){
-                            animation: bgMove 50s linear infinite;
-                        }
-                        @include media-breakpoint-between(lg,xl){
 
-                            animation: bgMove 50s linear infinite;
-                        }
-                        > .colorLayer{
-                            position: absolute;
-                            height: 100%;
-                            background-color:rgba(144, 238, 218, 0.842);
-                        }
-                        @keyframes bgMove {
-                            from {
-                                background-position: 0 0;
-                            }
-                            to{
-                                background-position: 100% 0;
-                            }
-                        }
+// LOGIN AND REGISTER // 
+
+#loginContainer,  #regContainer{
+    height: 100vh;
+    background-image: url("img/bg.png");
+    background-color: $SecondBgroundCol;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: 200%;
+    position: relative;
+    animation: bgMove 5s linear infinite;
+    @include media-breakpoint-only(xs){
+        background-size: 300%;
+        animation: bgMove 50s linear infinite;
+    }
+    @include media-breakpoint-only(sm){
+        animation: bgMove 50s linear infinite;
+    }
+    @include media-breakpoint-only(md){
+        animation: bgMove 50s linear infinite;
+    }
+    @include media-breakpoint-between(lg,xl){
+
+        animation: bgMove 50s linear infinite;
+    }
+    > .colorLayer{
+        position: absolute;
+        height: 100%;
+        background-color:rgba(144, 238, 218, 0.842);
+    }
+    @keyframes bgMove {
+        from {
+            background-position: 0 0;
+        }
+        to{
+            background-position: 100% 0;
+        }
+    }
+}
+
+#compContainer{
+    height: 100vh;
+    background-color: $SecondBgroundCol;   
+}
+
+// NAVBAR //
+
+#navbarWrapper{
+    background-color: $SecondBgroundCol;
+    z-index: 999;
+    
+    .navbar-toggler:focus{
+        outline: none;
+    }
+    .navheader{
+        font-family: $FontFamHeading;
+        color: $BackGroundCol;
+        text-shadow: 2px 2px 4px #8b8b8b;
+    }
+    .navbar-brand{
+        transition: all .2s;
+        &:hover{
+            transform: scale(1.02);
+        }
+        @include media-breakpoint-between(xs,sm){
+            @include smallHFont();
+        }
+        @include media-breakpoint-between(md,xl){
+            @include bigHFont();
+        }
+    }
+    #navbarDropdownMenuLink{
+        transition: all .2s;
+        height: 74px;
+        background-color: $PrimaryFontCol;
+        color: $blackColor;
+        font-size: 20px;
+        border: $border;
+        border-radius: 10px;
+        @include media-breakpoint-between(xs,md){
+            height: auto;
+            width: auto;
+            margin-bottom: 8px;
+            padding-left: 24px;
+        }
+        &:focus {
+            outline:none !important}
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+    #navbarNavDropdown > ul > li.nav-item.dropdown.pl-1.show > div{
+        @include media-breakpoint-between(xs,md){ margin-bottom: 8px;}
+    }
+    #navbarNavDropdown{
+        
+        > ul > li > a {
+            transition: all .2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 74px;
+            width: 74px;
+            background-color: $PrimaryFontCol;
+            border-radius: 50%;
+            border: $border;
+            @include media-breakpoint-between(xs,md){
+                height: auto;
+                width: auto;
+                border: none;
+                background: none;
+                border-radius: 10px;
+                padding-left: 24px;
+            }
+            .icon{
+                @include media-breakpoint-between(sm,xl){
+                    display: flex;
+                    fill: $blackColor;
+                    align-self: center;
+                    
+                }
+                @include media-breakpoint-between(xs,md){
+                    display: none;
+                }
+            }
+            .text{ 
+                display: flex;
+                @include media-breakpoint-between(lg,xl){
+                    display: none;
+                }
+            }
+            svg{
+                fill:rgb(85, 85, 85);
+                height: 35px;
+                width: 35px;
+            }
+            &:hover{
+                transform: scale(1.05);
+            }
+            
+        } 
+        .nav-item.dropdown{
+            @include media-breakpoint-between(xs,md){
+                padding: 8px 0 8px 0;
+            } 
+        }
+    }
+    .dropdown-toggle::after{display: none;}
+    .dropdown-menu{
+        border-radius: 10px;
+    }
+}
+
+
+
+#pageWrapper{
+    flex: 1 0 auto;
+    #forumWrapper{
+        h1{
+            @include bigHFont();
+            
+        }
+    }
+    #fbWrapper, #forumWrapper{
+        height: 100%;
+        padding: 0;
+        position: relative;
+        background-color: $SecondBgroundCol;
+        padding: 5vh 0;
+        @include media-breakpoint-between(xs,sm) {padding: 0 0 3vh 0;}
+        @include media-breakpoint-only(md) {padding: 3vh 2vh 3vh 2vh }
+      
+        & > div:first-child > div{
+            justify-content: space-between;
+            @include media-breakpoint-down(md){
+                justify-content: space-evenly;
+                padding-bottom: 0;
+            }
+            @include media-breakpoint-only(xs){
+                justify-content: start;
+                padding-bottom: 5px;
+            }
+        }
+        
+    }  
+}
+
+// ADD SERVICE //
+
+#addserviceWrapper{
+    position: relative;                            
+}
+
+// MAPS AND MAPCONTAINERS
+
+#map{
+    position: relative;
+    @include media-breakpoint-between(md,xl){
+        height: 50vh;
+    }
+    @include media-breakpoint-down(md){
+        height: 40vh;
+        margin: 8px 0 8px 0;
+    }
+    @include media-breakpoint-down(sm){
+        height: 30vh;
+        margin: 8px 0 8px 0;
+    }
+    .mapContainer{
+        margin: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: greenyellow;
+        border: $border;
+    }
+    .sidebarStyle {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 12px;
+        background-color: #404040a8;
+        border-radius: 10px;
+        color: #ffffff;
+        z-index: 1 !important;
+        padding: 6px;
+        font-weight: lighter;
+        font-size: 0.8em;
+    }
+}
+
+#mapParent {
+    background-color: $PrimaryFontCol;
+    position: relative;
+    border: $border;
+    @include media-breakpoint-between(md,xl){
+        height: 65vh;
+    }
+    @include media-breakpoint-down(md){
+        height: 50vh;
+        margin: 8px 0 8px 0;
+    }
+    @include media-breakpoint-down(sm){
+        height: 45vh;
+        margin: 8px 0 8px 0;
+    }
+    .mapContainer{
+        margin: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: greenyellow;
+        border: $border;
+    }
+    .sidebarStyle {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 12px;
+        background-color: #404040a8;
+        border-radius: 10px;
+        color: #ffffff;
+        z-index: 1 !important;
+        padding: 6px;
+        font-weight: lighter;
+        font-size: 0.8em;
+    }
+}
+
+.mapboxgl-marker {
+    background-image: url('img/placeholder.svg');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+}
+.mapboxgl-popup {
+    max-width: 200px;
+}
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: $FontFam;
+    > h1{
+        font-size: 1rem;
+        color: $blackColor;
+    }
+}
+
+#mapappWrapper{
+    height: 100%;
+    @include media-breakpoint-down(sm){
+        margin-top: 8px;
+    }
+    position: relative;
+    form {
+        
+        > div#searchForm {
+            
+            @include media-breakpoint-only(xs) {
+                padding: 10px;
+            }
+            @include media-breakpoint-between(sm,lg) {padding-bottom: 0;}
+        
+            #searchInput {
+                > input{
+                    background-color: $inputbackColor;
+                    &::placeholder{
+                    color: #7c7b76;
+                    font-style: italic; 
+                    } 
+                }  
+            }    
+            #searchBtn > button{ 
+                    transition: transform .2s;
+                &:hover{ 
+                    transform: scale(1.02);
+                    background-color:rgb(141, 138, 133);
+                    border: 1px rgb(82, 79, 79) solid;
+                    svg{
+                        fill: rgb(0, 255, 170);
                     }
                 }
-                
-                #compContainer{
-                    height: 100vh;
-                    background-color: $SecondBgroundCol;
-                    #navbarWrapper{
-                        background-color: $SecondBgroundCol;
-                        z-index: 999;
-                        
-                        .navbar-toggler:focus{
-                            outline: none;
+                > svg {
+                    
+                    height: 100%;
+                    fill: rgb(85, 85, 85);
+                }
+            }
+            input, button{
+                border: $border;
+            }
+            #asyncresult{ 
+                z-index: 50;
+                @include media-breakpoint-between(sm,xl){
+                    transform: translateY(calc(1.5em + 1rem + 0.5rem));
+                    position: absolute;
+                }
+                @include media-breakpoint-only(xs){
+                    position: inherit;
+                }
+                ul {
+                    padding-left: 0;
+                    border: $border;
+                    border-radius: 10px;
+                    background-color: $PrimaryFontCol;
+                    list-style-type: none;
+                    
+                    > li {
+                        cursor: pointer;
+                        padding: 8px 16px;
+                        &:first-child{
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                        } 
+                        &:last-child{
+                            border-bottom-left-radius: 10px;
+                            border-bottom-right-radius: 10px;
                         }
-                        .navbar-brand{
-                            transition: all .2s;
-                            &:hover{
-                                transform: scale(1.02);
-                            }
-                            @include media-breakpoint-between(xs,sm){
-                                @include smallHFont();
-                            }
-                            @include media-breakpoint-between(md,xl){
-                                @include bigHFont();
-                            }
-                        }
-                        #navbarDropdownMenuLink{
-                            transition: all .2s;
-                            height: 74px;
-                            background-color: $PrimaryFontCol;
-                            color: $blackColor;
-                            font-size: 20px;
-                            border: $border;
-                            border-radius: 10px;
-                            @include media-breakpoint-between(xs,md){
-                                height: auto;
-                                width: auto;
-                                margin-bottom: 8px;
-                                padding-left: 24px;
-                            }
-                            &:focus {
-                                outline:none !important}
-                            &:hover{
-                                transform: scale(1.02);
-                            }
-                        }
-                        #navbarNavDropdown > ul > li.nav-item.dropdown.pl-1.show > div{
-                            @include media-breakpoint-between(xs,md){ margin-bottom: 8px;}
-                        }
-                        #navbarNavDropdown{
-                            
-                            > ul > li > a {
-                                transition: all .2s;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                height: 74px;
-                                width: 74px;
-                                background-color: $PrimaryFontCol;
-                                border-radius: 50%;
-                                border: $border;
-                                @include media-breakpoint-between(xs,md){
-                                    height: auto;
-                                    width: auto;
-                                    border: none;
-                                    background: none;
-                                    border-radius: 10px;
-                                    padding-left: 24px;
-                                }
-                                .icon{
-                                    @include media-breakpoint-between(sm,xl){
-                                        display: flex;
-                                        fill: $blackColor;
-                                        align-self: center;
-                                        
-                                    }
-                                    @include media-breakpoint-between(xs,md){
-                                        display: none;
-                                    }
-                                }
-                                .text{ 
-                                    display: flex;
-                                    @include media-breakpoint-between(lg,xl){
-                                        display: none;
-                                    }
-                                }
-                                svg{
-                                    fill:rgb(85, 85, 85);
-                                    height: 35px;
-                                    width: 35px;
-                                }
-                                &:hover{
-                                    transform: scale(1.05);
-                                }
-                                
-                            } 
-                            .nav-item.dropdown{
-                                @include media-breakpoint-between(xs,md){
-                                    padding: 8px 0 8px 0;
-                                } 
-                            }
-                        }
-                        .dropdown-toggle::after{display: none;}
-                        .dropdown-menu{
-                            border-radius: 10px;
+                        &:focus, &:hover{
+                            background-color: #929292;
+                            outline: $borderColor;
+                            font-size: 1.1rem;
                         }
                     }
-                    #pageWrapper{
-                        flex: 1 0 auto;
-                        #forumWrapper{
-                            h1{
-                                @include bigHFont();
-                                
-                            }
-                        }
-                        #fbWrapper{
-                            position: relative;
-                            background-color: $SecondBgroundCol;
-                            padding: 5vh 0;
-                            @include media-breakpoint-between(xs,sm) {padding: 0 0 3vh 0;}
-                            @include media-breakpoint-only(md) {padding: 3vh 2vh 3vh 2vh }
-                          
-                            & > div:first-child > div{
-                                justify-content: space-between;
-                                @include media-breakpoint-down(md){
-                                    justify-content: space-evenly;
-                                    padding-bottom: 0;
-                                }
-                                @include media-breakpoint-only(xs){
-                                    justify-content: start;
-                                    padding-bottom: 5px;
-                                }
-                            }
-                            #mapappWrapper{
-                                height: 100%;
-                                @include media-breakpoint-down(sm){
-                                    margin-top: 8px;
-                                }
-                                position: relative;
-                                form {
-                                    
-                                    > div#searchForm {
-                                        
-                                        @include media-breakpoint-only(xs) {
-                                            padding: 10px;
-                                        }
-                                        @include media-breakpoint-between(sm,lg) {padding-bottom: 0;}
-                                    
-                                        #searchInput {
-                                            > input{
-                                                background-color: $inputbackColor;
-                                                &::placeholder{
-                                                color: #7c7b76;
-                                                font-style: italic; 
-                                                } 
-                                            }  
-                                        }    
-                                        #searchBtn > button{ 
-                                                transition: transform .2s;
-                                            &:hover{ 
-                                                transform: scale(1.02);
-                                                background-color:rgb(141, 138, 133);
-                                                border: 1px rgb(82, 79, 79) solid;
-                                                svg{
-                                                    fill: rgb(0, 255, 170);
-                                                }
-                                            }
-                                            > svg {
-                                                
-                                                height: 100%;
-                                                fill: rgb(85, 85, 85);
-                                            }
-                                        }
-                                        input, button{
-                                            border: $border;
-                                        }
-                                        #asyncresult{ 
-                                            z-index: 50;
-                                            @include media-breakpoint-between(sm,xl){
-                                                transform: translateY(calc(1.5em + 1rem + 0.5rem));
-                                                position: absolute;
-                                            }
-                                            @include media-breakpoint-only(xs){
-                                                position: inherit;
-                                            }
-                                            ul {
-                                                padding-left: 0;
-                                                border: $border;
-                                                border-radius: 10px;
-                                                background-color: $PrimaryFontCol;
-                                                list-style-type: none;
-                                                
-                                                > li {
-                                                    cursor: pointer;
-                                                    padding: 8px 16px;
-                                                    &:first-child{
-                                                        border-top-left-radius: 10px;
-                                                        border-top-right-radius: 10px;
-                                                    } 
-                                                    &:last-child{
-                                                        border-bottom-left-radius: 10px;
-                                                        border-bottom-right-radius: 10px;
-                                                    }
-                                                    &:focus, &:hover{
-                                                        background-color: #929292;
-                                                        outline: $borderColor;
-                                                        font-size: 1.1rem;
-                                                    }
-                                                }
-                                            } 
-                                        }
-                                    }
-                                }
-                            
-                                #mapParent{
-                                    background-color: $PrimaryFontCol;
-                                    position: relative;
-                                    border: $border;
-                                    @include media-breakpoint-between(md,xl){height: 65vh;};
-                                    @include media-breakpoint-down(md){
-                                        height: 50vh;
-                                        margin: 8px 0 8px 0;
-                                    };
-                                    @include media-breakpoint-down(sm){
-                                        height: 45vh;
-                                        margin: 8px 0 8px 0;
-                                    };
-                                    .sidebarStyle {
-                                        display: inline-block;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        margin: 12px;
-                                        background-color: #404040a8;
-                                        border-radius: 10px;
-                                        color: #ffffff;
-                                        z-index: 1 !important;
-                                        padding: 6px;
-                                        font-weight: lighter;
-                                        font-size: 0.8em;
-                                    }
-                                    .mapContainer{
-                                        margin: 10px;
-                                        position: absolute;
-                                        top: 0;
-                                        right: 0;
-                                        left: 0;
-                                        bottom: 0;
-                                        background-color: greenyellow;
-                                        border: $border;
-                                        .mapboxgl-marker {
-                                            background-image: url('img/placeholder.svg');
-                                            background-size: cover;
-                                            width: 40px;
-                                            height: 40px;
-                                            cursor: pointer;
-                                            z-index: 10;
-                                        }
-                                        .mapboxgl-popup {
-                                            max-width: 200px;
-                                        }
-                                        .mapboxgl-popup-content {
-                                            text-align: center;
-                                            font-family: $FontFam;
-                                            > h1{
-                                                font-size: 1rem;
-                                                color: $blackColor;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            #forumContainer{
-                                height: 100%;
-                                padding: 0;
-                                @include media-breakpoint-between(xs,sm){
-                                    margin: 8px 0 8px 0;
-                                }
-                                > .card{
-                                    background-color: $PrimaryFontCol;
-                                    border: $border;
-                                    .card-header{
-                                        @include smallerHFont();
-                                        &:hover{
-                                            
-                                        }
-                                        &.title{
-                                            transition: transform .2;
-                                            border-top: 1px $borderColor solid;
-                                            padding: 8px 16px;
-                                            
-                                            
-                                            > h2{
-                                                
-                                                color: $blackColor;
-                                                font-size: 1.2rem;
-                                                font-weight: bold;
-                                                padding: 0;
-                                                margin: 0;
-                                                @include media-breakpoint-between(xs,md){
-                                                    font-size: 1rem;
-                                                }
-                                                
-                                            }
-                                            > p.date{
-                                                padding: 0;
-                                                margin: 0;
-                                                font-size: 0.8rem;
-                                                text-align: end;
-                                                white-space: nowrap;
-                                                @include media-breakpoint-between(xs,md){
-                                                    font-size: 0.7rem;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    .card-body{
-                                        overflow: auto;
-                                        max-height: 15vh;
-                                        padding-top: 8px;
-                                        &::-webkit-scrollbar{
-                                            width: 0;
-                                        }
-                                        > p{    
-                                            
-                                            font-size: 1rem;
-                                            margin: 0;
-                                            padding: 0;
-                                            @include media-breakpoint-between(xs,md){
-                                                font-size: 0.8rem;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                } 
+            }
+        }
+    }
+}
+
+// FORUM //
+
+#forumContainer{
+    height: 100%;
+    padding: 0;
+    @include media-breakpoint-between(xs,sm){
+        margin: 8px 0 8px 0;
+    }
+    > .card{
+        background-color: $PrimaryFontCol;
+        border: $border;
+        .card-header{
+            @include smallerHFont();
+            &:hover{
+                
+            }
+            &.title{
+                transition: transform .2;
+                border-top: 1px $borderColor solid;
+                padding: 8px 16px;
+                
+                
+                > h2{
+                    
+                    color: $blackColor;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    padding: 0;
+                    margin: 0;
+                    @include media-breakpoint-between(xs,md){
+                        font-size: 1rem;
                     }
                     
-                    #sticky-footer {
-                        z-index: 999;
-                        background-color: $SecondBgroundCol;
-                        box-shadow: 0 -6px 18px -5px rgba(0, 0, 0, 0.473);
-                        footer{
-                            #centerCR{
-                                @include media-breakpoint-between(xs,sm){
-                                    display: none;
-                                } 
-                            }
-                            #rightCR{
-                                @include media-breakpoint-between(md,xl){
-                                    display: none;
-                                }
-                            }
-                            > #someIcons{
-                                > div{
-                                    transition: all .2s;
-                                    width: 35px;
-                                    height: 35px;
-                                    margin-right: 8px;
-                                    &:hover{
-                                        transform: scale(1.05);
-                                    }@include media-breakpoint-between(xs,sm){
-                                        width: 24px;
-                                        height: 24px;
-                                    }
-                                    > svg{
-                                        height: 100%;
-                                        width: 100%;
-                                    }  
-                                }
-                            }
-                        }
+                }
+                > p.date{
+                    padding: 0;
+                    margin: 0;
+                    font-size: 0.8rem;
+                    text-align: end;
+                    white-space: nowrap;
+                    @include media-breakpoint-between(xs,md){
+                        font-size: 0.7rem;
                     }
                 }
             }
         }
-    }  
+        .card-body{
+            overflow: auto;
+            max-height: 15vh;
+            padding-top: 8px;
+            &::-webkit-scrollbar{
+                width: 0;
+            }
+            > p{    
+                
+                font-size: 1rem;
+                margin: 0;
+                padding: 0;
+                @include media-breakpoint-between(xs,md){
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
 }
 
 
+// FOOTER //
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#sticky-footer {
+    z-index: 999;
+    background-color: $SecondBgroundCol;
+    box-shadow: 0 -6px 18px -5px rgba(0, 0, 0, 0.473);
+    footer{
+        #centerCR{
+            @include media-breakpoint-between(xs,sm){
+                display: none;
+            } 
+        }
+        #rightCR{
+            @include media-breakpoint-between(md,xl){
+                display: none;
+            }
+        }
+        > #someIcons{
+            > div{
+                transition: all .2s;
+                width: 35px;
+                height: 35px;
+                margin-right: 8px;
+                &:hover{
+                    transform: scale(1.05);
+                }@include media-breakpoint-between(xs,sm){
+                    width: 24px;
+                    height: 24px;
+                }
+                > svg{
+                    height: 100%;
+                    width: 100%;
+                }  
+            }
+        }
+    }
+}

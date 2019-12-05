@@ -7,8 +7,8 @@ import './site.scss';
 class Faq extends React.Component {
     render() {
         return (
-            <div className="page">
-                 <h1>Faq</h1>
+            <div id="faqWrapper" className="page d-flex justify-content-around flex-wrap">
+
             </div>
         );
     }

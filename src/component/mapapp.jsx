@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 import * as $ from 'jquery';
 import React from 'react';
-import '../site.scss';
+import '../styles/site.scss';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 

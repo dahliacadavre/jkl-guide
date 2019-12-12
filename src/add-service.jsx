@@ -2,9 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 import React from 'react';
-import './site.scss';
+import './styles/site.scss';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { Spring, config } from 'react-spring/renderprops';
 
 export default class Addservice extends React.Component {
     constructor(props) {
@@ -41,53 +42,90 @@ export default class Addservice extends React.Component {
 
     render() {
         return (
-            <div id="addserviceWrapper" className="page d-flex justify-content-around flex-wrap">
-                <div className="col-md-6">
-                    <form className="">
-                        <div>
-                            <label className="col-form-label">Service name</label>
-                            <input className="form-control" type='text'></input>
+            <Spring
+                config={config.slow}
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+            >
+            { props =>
+                <div style={props} id="addserviceWrapper" className="d-flex justify-content-around flex-wrap">
+                    <form className="d-flex justify-content-around flex-wrap">
+                        <div className="col-md-6 d-flex flex-column pl-xl-5">
+                            <div className="d-flex flex-wrap align-content-start">
+                                <div className="col-12 p-0">
+                                    <label className="col-form-label pb-0">Service name</label>
+                                    <input className="form-control" type='text' placeholder='Enter name'></input>
+                                </div>
+                                <div id="addressline" className="form-inline justify-content-between col-12 p-0">
+                                    <label className="col-form-label col-10 pb-0 pl-0 m-0 justify-content-start">Address</label>
+                                    <input className="form-control col-9" type='text' placeholder='Streetname, streetnumber, house/apartment'></input>
+                                    <input className="form-control col-3" type="number" placeholder="postalcode"></input>
+                                </div>
+                                <div className="form-row m-0 p-0 col-12">
+                                    <div className="form-group m-0 p-0 pr-sm-2 col-sm-6">
+                                        <label className="col-form-label pb-0 justify-content-start">City</label>
+                                        <input className="form-control" type='text' placeholder="Enter city name"></input>
+                                    </div>
+                                    <div className="form-group m-0 p-0  col-sm-6">
+                                        <label className="col-form-label pb-0 justify-content-start">Country</label>
+                                        <input className="form-control" type='text' placeholder="Enter Country name"></input>
+                                    </div>
+                                </div>
+                                <div className="col-12 p-0">
+                                    <label className="col-form-label pb-0">Email</label>
+                                    <input className="form-control" type='text' placeholder='@'></input>
+                                </div>
+                                <div className="col-12 p-0">
+                                    <label className="col-form-label pb-0">Phonenumber</label>
+                                    <input className="form-control" type='text' placeholder='+358'></input>
+                                </div>  
+                                <div className="col-12 p-0">
+                                    <label className="col-form-label pb-0">Website</label>
+                                    <input className="form-control" type='text' placeholder='https://'></input>
+                                </div>
+                            </div>
+                            <div className="d-flex flex-wrap flex-fill mb-3">
+                                <div className="col-sm-8 p-0 d-flex flex-column flex-fill mr-sm-3">
+                                        <label className="col-form-label pb-0">Service details</label>
+                                        <textarea className="form-control flex-fill" type='text'></textarea>
+                                </div>
+                                <div className="p-0 d-flex flex-column flex-fill">
+                                        <label className="col-form-label pb-0">Image</label>
+                                        <div id="imgbase" className="form-control" type='text'><p>.jpg .png .gif</p></div>
+                                </div>    
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"/>
+                                    <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
+                                </div>
+                            </div> 
                         </div>
-                        <div>
-                            <label className="col-form-label">Address</label>
-                            <input className="form-control" type='text'></input>
+                        <div className="col-md-5 d-flex flex-column justify-content-between pr-xl-5">
+                            <div className="d-flex flex-wrap align-content-start">
+                                <label className="col-form-label pb-0">Coordinates</label>
+                                <div id="map" className="container-fluid px-0 rounded shadow mt-0">
+                                    <div className='sidebarStyle'>
+                                        <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
+                                    </div>
+                                    <div ref={el => this.mapContainer = el} className="mapContainer"/>
+                                </div>  
+                                <div id="coordinates" className="form-inline justify-content-between mt-sm-3 col-12 p-0 mb-3">
+                                    <input className="form-control mt-3 mt-sm-0 col-sm-6" type='text' placeholder="Longitude"></input>
+                                    <input className="form-control mt-3 mt-sm-0 col-sm-6" type='text' placeholder="Latitude"></input>
+                                </div>
+                            </div>
+                            <div className="text-right">
+                                <button type="submit" className="btn-lg col-sm-6">Submit</button>
+                            </div>
                         </div>
-                        <div>
-                            <label className="col-form-label">Email</label>
-                            <input className="form-control" type='text'></input>
-                        </div>
-                        <div>
-                            <label className="col-form-label">Phonenumber</label>
-                            <input className="form-control" type='text'></input>
-                        </div>  
-                        <div>
-                            <label className="col-form-label">Website</label>
-                            <input className="form-control" type='text'></input>
-                        </div>
-                        <div>
-                            <label className="col-form-label">Service details</label>
-                            <textarea className="form-control" type='text'></textarea>
-                        </div>
-                        <button type="button" className="btn-lg">Upload image</button>
-                    </form>  
+                    </form>
                 </div>
-                <div className="col-md-6">
-                    <div id="map" className="container-fluid px-0 rounded shadow mt-md-2 mt-0">
-                        <div className='sidebarStyle'>
-                            <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
-                        </div>
-                        <div ref={el => this.mapContainer = el} className="mapContainer"/>
-                    </div>
-                    <div>
-                        <label className="col-form-label">Coordinates</label>
-                        <div className="form-inline">
-                            <input className="form-control" type='text' placeholder="Longitude"></input>
-                            <input className="form-control" type='text' placeholder="Latitude"></input>
-                        </div>
-                    </div>
-                    <button type="button" className="btn-lg">Submit</button>
-                </div>
-            </div>
+            }
+            </Spring>
         );
     }
 }

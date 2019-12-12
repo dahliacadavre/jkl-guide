@@ -5,19 +5,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
-    Route,
-    Switch
+    Route
 } from "react-router-dom";
-import {
-    CSSTransition,
-    TransitionGroup,
-  } from 'react-transition-group';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
-import './site.scss';
+import './styles/site.scss';
 import LoginApp from './login';
 import Frontpage from './frontpage';
+import { Spring, config } from 'react-spring/renderprops';
 
 class App extends React.Component {
     constructor() {
@@ -29,34 +25,32 @@ class App extends React.Component {
         }
     }
     render() {
+        
         return (
-            <div id="componentWrapper">
-                        <Route  
-                            path="/"
-                            render={props => (
-                                <CSSTransition
-                                timeout={600}
-                                classNames="fade"
-                                >
-                                <LoginApp {...props} loggedInStatus={this.state.loggedInStatus} />
-                                </CSSTransition>
-
-                            )}
-                        >   
-                        </Route>
-                        <Route 
-                            path="/JKL-Guide"
-                            render={props => (
-                                <CSSTransition
-                                timeout={600}
-                                classNames="fade"
-                                >
-                                <Frontpage {...props} loggedInStatus={this.state.loggedInStatus} />
-                                </CSSTransition>
-                            )}
-                        >
-                        </Route> 
-            </div>    
+            <Spring
+                config = {config.slow}
+                from = {{opacity: 0}}
+                to = {{opacity: 1}}
+            >
+            { props =>
+                <div style={props} id="componentWrapper">
+                    <Route  
+                        path="/"
+                        render={props => (
+                            <LoginApp {...props} loggedInStatus={this.state.loggedInStatus} />
+                        )}
+                    >   
+                    </Route>
+                    <Route 
+                        path="/JKL-Guide"
+                        render={props => (
+                            <Frontpage {...props} loggedInStatus={this.state.loggedInStatus} />
+                        )}
+                    >
+                    </Route> 
+                </div> 
+            }       
+            </Spring>
         );
     }
 };

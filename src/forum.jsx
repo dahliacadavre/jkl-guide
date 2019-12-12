@@ -2,8 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
-import './site.scss';
+import './styles/site.scss';
 import ForumSmall from './component/forumsmall';
+import {Spring, config} from 'react-spring/renderprops';
 
 export default class Forum extends React.Component {
     constructor(props){
@@ -30,18 +31,28 @@ export default class Forum extends React.Component {
     }
     render() {
         return (
-            <div id="forumWrapper" className="page d-flex justify-content-around flex-wrap">
-               <div className="col-lg-8 pr-lg-0 pl-xl-5 pl-lg-3">
-                   <div className="card h-100 shadow justify-content-start">
-                        {this.renderDiscussions()}
-                        {this.renderDiscussions()}
-                        {this.renderDiscussions()}
-                   </div>
-               </div>
-               <div className="col-lg-3 pl-lg-0 pr-xl-5 pr-lg-3">
-                    <ForumSmall />
-               </div>
-            </div>
+            <Spring
+                config={config.slow}
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+            > 
+            { props =>
+                <div style={props} id="forumWrapper" className="d-flex justify-content-around flex-wrap">
+                    <div className="col-lg-8 pr-lg-0 pl-xl-5 pl-lg-3 pt-3 pt-md-0">
+                        <div id="fContainer" className="card h-100 shadow justify-content-start">
+                                {this.renderDiscussions()}
+                                {this.renderDiscussions()}
+                                {this.renderDiscussions()}
+                                {this.renderDiscussions()}
+                                {this.renderDiscussions()}
+                        </div>
+                    </div>
+                    <div className="col-lg-3 pl-lg-0 pr-xl-5 pr-lg-3">
+                            <ForumSmall />
+                    </div>
+                </div>
+            }
+            </Spring>
         );
     }
 }

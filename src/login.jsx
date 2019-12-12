@@ -6,7 +6,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
-import './site.scss';
+import './styles/site.scss';
 
 const JklGuideLogo = 
 <svg id="jklGuideLogo" width="553" height="88" viewBox="0 0 553 88" fill="none" xmlns="http://www.w3.org/2000/svg">

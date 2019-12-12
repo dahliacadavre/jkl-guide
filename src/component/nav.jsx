@@ -5,7 +5,7 @@ import React from 'react';
 import {
     Link
 } from "react-router-dom";
-import '../site.scss';
+import '../styles/site.scss';
 
 const forumIcon = 
     <svg width="11.906mm" height="11.906mm" version="1.1" viewBox="0 0 11.906 11.906" xmlns="http://www.w3.org/2000/svg">
@@ -54,13 +54,16 @@ export default class Nav extends React.Component {
         return (
             <div id="navbarWrapper" className="container-fluid p-0">
                 <nav className="navbar navbar-expand-lg navbar-light shadow py-2">
-                    <Link to="/JKL-Guide/" className="navbar-brand py-0 pl-md-4 mr-0">JKL-Guide</Link>
-                    <h1 className="navheader py-0 pl-md-4 mr-0 mb-0">{this.props.siteName}</h1>
+                    <div className="d-flex flex-wrap flex-columns flex-xl-row">
+                        <Link to="/JKL-Guide/" className="navbar-brand py-0 pl-md-4 mr-0">JKL-Guide</Link>
+                        <h1 className="navheader py-0 pl-md-4 mr-0 mb-0 align-self-center">{this.props.siteName}</h1>
+                    </div>
+                    
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul className=" nav navbar-nav ml-auto align-items-center-md">
+                    <div className="collapse navbar-collapse flex-nowrap" id="navbarNavDropdown">
+                        <ul className=" nav navbar-nav ml-auto align-items-center-md flex-nowrap">
                             <li className="nav-item px-1">
                                 <Link to="/JKL-Guide/Add-service" className="nav-link shadow">
                                     <span className="icon">{plusIcon}</span>

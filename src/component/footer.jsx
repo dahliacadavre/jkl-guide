@@ -6,7 +6,7 @@ import { ReactComponent as Face } from '../img/face.svg';
 import { ReactComponent as Insta } from '../img/insta.svg';
 import { ReactComponent as Linkd } from '../img/linkd.svg';
 import { ReactComponent as Twitter } from '../img/twitter.svg';
-import '../site.scss';
+import '../styles/site.scss';
 
 export default class Footer extends React.Component {
     constructor(props){

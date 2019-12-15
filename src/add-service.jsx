@@ -94,13 +94,13 @@ export default class Addservice extends React.Component {
                                         <div id="imgbase" className="form-control" type='text'><p>.jpg .png .gif</p></div>
                                 </div>    
                             </div>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            <div className="input-group shadow">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="inputGroupFileAddon01">Upload</span>
                                 </div>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"/>
-                                    <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
+                                <div className="custom-file">
+                                    <input type="file" className="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"/>
+                                    <label className="custom-file-label" htmlFor="inputGroupFile01">Choose image</label>
                                 </div>
                             </div> 
                         </div>
